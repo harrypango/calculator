@@ -1,16 +1,16 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   font-family: Gotham Rounded, sans-serif;
   font-weight: normal;
 }
 
 body {
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
   background: linear-gradient(
-    to right,
+    135deg,
     rgba(121, 9, 9, 1) 28%,
     rgba(0, 7, 255, 1) 99%
   );
@@ -61,4 +61,11 @@ body {
 .output .current-operand {
   color: white;
   font-size: 2.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .calculator-grid {
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 75px);
+  }
 }
